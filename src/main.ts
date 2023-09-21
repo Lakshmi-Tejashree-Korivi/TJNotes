@@ -1,10 +1,5 @@
-/*import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-
+import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { AppModule } from './app/app.module';
-
-
-platformBrowserDynamic().bootstrapModule(AppModule)
-  .catch(err => console.error(err)); */
 import 'zone.js/dist/zone';
 import { bootstrapApplication } from '@angular/platform-browser';
 import { AppComponent } from './app/app.component';
@@ -17,6 +12,8 @@ const routes: Routes = [
   { path:'new', component: AddNoteComponent },
   { path: 'note/:id' , component:NoteDetailComponent},
 ];
+platformBrowserDynamic().bootstrapModule(AppModule)
+  .catch(err => console.error(err)); 
 bootstrapApplication(AppComponent, {
   providers: [provideRouter(routes)],
 });
