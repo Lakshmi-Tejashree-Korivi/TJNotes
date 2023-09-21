@@ -1,0 +1,11 @@
+<div id="content-container">
+  <section *ngIf="note" id="note-container">
+    <span class="note-title">{{note.title}}</span>
+    <span class="note-id">ID: {{note.id}}</span>
+    <span class="note-text">{{note.text}}</span>
+  </section>
+  <button class="red" (click) = "delete()"> Delete </button>
+  <nav>
+    <button routerLink="">Go Back</button>
+  </nav>
+</div>
